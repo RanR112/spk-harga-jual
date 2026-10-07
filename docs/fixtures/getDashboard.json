@@ -1,0 +1,694 @@
+{
+  "ok": true,
+  "data": {
+    "rekomendasi": {
+      "tanggal_data": "2026-10-02",
+      "pengaturan": {
+        "batas_naik_persen": 10,
+        "batas_turun_persen": 10,
+        "margin_target_persen": 45,
+        "margin_minimum_persen": 35,
+        "pembulatan": 500,
+        "periode_moving_average_hari": 7
+      },
+      "ringkasan": {
+        "total": 9,
+        "naik": 4,
+        "promo": 2,
+        "tahan": 3,
+        "data": 0
+      },
+      "items": [
+        {
+          "id_produk": "P03",
+          "nama_produk": "Ayam Geprek + Nasi",
+          "harga_jual": 22000,
+          "hpp_baseline": 12564,
+          "hpp": 14302,
+          "perubahan_persen": 13.8,
+          "margin_persen": 35,
+          "margin_awal_persen": 42.9,
+          "keputusan": "NAIKKAN HARGA",
+          "urgensi": "Tinggi",
+          "harga_saran": 26500,
+          "kenaikan_rp": 4500,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "Naikkan harga karena HPP naik 13,8% (batas 10,0%) dan margin 34,99% di bawah minimum 35,0%. Saran harga Rp26.500 (naik Rp4.500).",
+          "rincian": [
+            {
+              "bahan": "Daging ayam",
+              "satuan": "kg",
+              "takaran": 0.15,
+              "harga_rata2": 41971,
+              "biaya": 6296,
+              "porsi_persen": 44
+            },
+            {
+              "bahan": "Cabai rawit merah",
+              "satuan": "kg",
+              "takaran": 0.04,
+              "harga_rata2": 91500,
+              "biaya": 3660,
+              "porsi_persen": 25.6
+            },
+            {
+              "bahan": "Beras",
+              "satuan": "kg",
+              "takaran": 0.15,
+              "harga_rata2": 14371,
+              "biaya": 2156,
+              "porsi_persen": 15.1
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.08,
+              "harga_rata2": 18143,
+              "biaya": 1451,
+              "porsi_persen": 10.1
+            },
+            {
+              "bahan": "Tepung terigu",
+              "satuan": "kg",
+              "takaran": 0.04,
+              "harga_rata2": 10714,
+              "biaya": 429,
+              "porsi_persen": 3
+            },
+            {
+              "bahan": "Bawang putih",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 31086,
+              "biaya": 311,
+              "porsi_persen": 2.2
+            }
+          ]
+        },
+        {
+          "id_produk": "P08",
+          "nama_produk": "Mie Rebus Telur",
+          "harga_jual": 14000,
+          "hpp_baseline": 5400,
+          "hpp": 6013,
+          "perubahan_persen": 11.3,
+          "margin_persen": 57.1,
+          "margin_awal_persen": 61.4,
+          "keputusan": "NAIKKAN HARGA",
+          "urgensi": "Rendah",
+          "harga_saran": 16000,
+          "kenaikan_rp": 2000,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "Naikkan harga karena HPP naik 11,3% (batas 10,0%). Saran harga Rp16.000 (naik Rp2.000).",
+          "rincian": [
+            {
+              "bahan": "Mie telur",
+              "satuan": "kg",
+              "takaran": 0.12,
+              "harga_rata2": 20343,
+              "biaya": 2441,
+              "porsi_persen": 40.6
+            },
+            {
+              "bahan": "Telur ayam",
+              "satuan": "kg",
+              "takaran": 0.06,
+              "harga_rata2": 33986,
+              "biaya": 2039,
+              "porsi_persen": 33.9
+            },
+            {
+              "bahan": "Cabai rawit merah",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 91500,
+              "biaya": 915,
+              "porsi_persen": 15.2
+            },
+            {
+              "bahan": "Bawang merah",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 28043,
+              "biaya": 280,
+              "porsi_persen": 4.7
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.01,
+              "harga_rata2": 18143,
+              "biaya": 181,
+              "porsi_persen": 3
+            },
+            {
+              "bahan": "Bawang putih",
+              "satuan": "kg",
+              "takaran": 0.005,
+              "harga_rata2": 31086,
+              "biaya": 155,
+              "porsi_persen": 2.6
+            }
+          ]
+        },
+        {
+          "id_produk": "P04",
+          "nama_produk": "Nasi Telur Dadar",
+          "harga_jual": 14000,
+          "hpp_baseline": 6501,
+          "hpp": 7231,
+          "perubahan_persen": 11.2,
+          "margin_persen": 48.3,
+          "margin_awal_persen": 53.6,
+          "keputusan": "NAIKKAN HARGA",
+          "urgensi": "Rendah",
+          "harga_saran": 16000,
+          "kenaikan_rp": 2000,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "Naikkan harga karena HPP naik 11,2% (batas 10,0%). Saran harga Rp16.000 (naik Rp2.000).",
+          "rincian": [
+            {
+              "bahan": "Telur ayam",
+              "satuan": "kg",
+              "takaran": 0.1,
+              "harga_rata2": 33986,
+              "biaya": 3399,
+              "porsi_persen": 47
+            },
+            {
+              "bahan": "Beras",
+              "satuan": "kg",
+              "takaran": 0.15,
+              "harga_rata2": 14371,
+              "biaya": 2156,
+              "porsi_persen": 29.8
+            },
+            {
+              "bahan": "Cabai merah keriting",
+              "satuan": "kg",
+              "takaran": 0.015,
+              "harga_rata2": 56829,
+              "biaya": 852,
+              "porsi_persen": 11.8
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.03,
+              "harga_rata2": 18143,
+              "biaya": 544,
+              "porsi_persen": 7.5
+            },
+            {
+              "bahan": "Bawang merah",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 28043,
+              "biaya": 280,
+              "porsi_persen": 3.9
+            }
+          ]
+        },
+        {
+          "id_produk": "P01",
+          "nama_produk": "Nasi Goreng Spesial",
+          "harga_jual": 18000,
+          "hpp_baseline": 7021,
+          "hpp": 7729,
+          "perubahan_persen": 10.1,
+          "margin_persen": 57.1,
+          "margin_awal_persen": 61,
+          "keputusan": "NAIKKAN HARGA",
+          "urgensi": "Rendah",
+          "harga_saran": 20000,
+          "kenaikan_rp": 2000,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "Naikkan harga karena HPP naik 10,1% (batas 10,0%). Saran harga Rp20.000 (naik Rp2.000).",
+          "rincian": [
+            {
+              "bahan": "Beras",
+              "satuan": "kg",
+              "takaran": 0.15,
+              "harga_rata2": 14371,
+              "biaya": 2156,
+              "porsi_persen": 27.9
+            },
+            {
+              "bahan": "Telur ayam",
+              "satuan": "kg",
+              "takaran": 0.06,
+              "harga_rata2": 33986,
+              "biaya": 2039,
+              "porsi_persen": 26.4
+            },
+            {
+              "bahan": "Daging ayam",
+              "satuan": "kg",
+              "takaran": 0.03,
+              "harga_rata2": 41971,
+              "biaya": 1259,
+              "porsi_persen": 16.3
+            },
+            {
+              "bahan": "Cabai rawit merah",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 91500,
+              "biaya": 915,
+              "porsi_persen": 11.8
+            },
+            {
+              "bahan": "Bawang merah",
+              "satuan": "kg",
+              "takaran": 0.015,
+              "harga_rata2": 28043,
+              "biaya": 421,
+              "porsi_persen": 5.4
+            },
+            {
+              "bahan": "Kecap manis",
+              "satuan": "liter",
+              "takaran": 0.015,
+              "harga_rata2": 28043,
+              "biaya": 421,
+              "porsi_persen": 5.4
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.02,
+              "harga_rata2": 18143,
+              "biaya": 363,
+              "porsi_persen": 4.7
+            },
+            {
+              "bahan": "Bawang putih",
+              "satuan": "kg",
+              "takaran": 0.005,
+              "harga_rata2": 31086,
+              "biaya": 155,
+              "porsi_persen": 2
+            }
+          ]
+        },
+        {
+          "id_produk": "P07",
+          "nama_produk": "Pisang Goreng (5 pcs)",
+          "harga_jual": 10000,
+          "hpp_baseline": 5832,
+          "hpp": 4919,
+          "perubahan_persen": -15.7,
+          "margin_persen": 50.8,
+          "margin_awal_persen": 41.7,
+          "keputusan": "BERI PROMO",
+          "urgensi": "",
+          "harga_saran": null,
+          "kenaikan_rp": null,
+          "diskon_maks_persen": 24.3,
+          "hemat_per_porsi": 913,
+          "keterangan": "HPP turun 15,7%, hemat Rp913 per porsi. Margin naik dari 41,7% menjadi 50,8%. Diskon maksimal yang masih aman 24,3% (harga tidak di bawah Rp7.568).",
+          "rincian": [
+            {
+              "bahan": "Pisang kepok",
+              "satuan": "kg",
+              "takaran": 0.25,
+              "harga_rata2": 11243,
+              "biaya": 2811,
+              "porsi_persen": 57.1
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.06,
+              "harga_rata2": 18143,
+              "biaya": 1089,
+              "porsi_persen": 22.1
+            },
+            {
+              "bahan": "Tepung terigu",
+              "satuan": "kg",
+              "takaran": 0.07,
+              "harga_rata2": 10714,
+              "biaya": 750,
+              "porsi_persen": 15.2
+            },
+            {
+              "bahan": "Gula pasir",
+              "satuan": "kg",
+              "takaran": 0.015,
+              "harga_rata2": 17957,
+              "biaya": 269,
+              "porsi_persen": 5.5
+            }
+          ]
+        },
+        {
+          "id_produk": "P09",
+          "nama_produk": "Bakwan Sayur (5 pcs)",
+          "harga_jual": 8000,
+          "hpp_baseline": 4470,
+          "hpp": 4016,
+          "perubahan_persen": -10.1,
+          "margin_persen": 49.8,
+          "margin_awal_persen": 44.1,
+          "keputusan": "BERI PROMO",
+          "urgensi": "",
+          "harga_saran": null,
+          "kenaikan_rp": null,
+          "diskon_maks_persen": 22.7,
+          "hemat_per_porsi": 454,
+          "keterangan": "HPP turun 10,1%, hemat Rp454 per porsi. Margin naik dari 44,1% menjadi 49,8%. Diskon maksimal yang masih aman 22,7% (harga tidak di bawah Rp6.180).",
+          "rincian": [
+            {
+              "bahan": "Bawang merah",
+              "satuan": "kg",
+              "takaran": 0.05,
+              "harga_rata2": 28043,
+              "biaya": 1402,
+              "porsi_persen": 34.9
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.06,
+              "harga_rata2": 18143,
+              "biaya": 1089,
+              "porsi_persen": 27.1
+            },
+            {
+              "bahan": "Tepung terigu",
+              "satuan": "kg",
+              "takaran": 0.1,
+              "harga_rata2": 10714,
+              "biaya": 1071,
+              "porsi_persen": 26.7
+            },
+            {
+              "bahan": "Kol",
+              "satuan": "kg",
+              "takaran": 0.05,
+              "harga_rata2": 9086,
+              "biaya": 454,
+              "porsi_persen": 11.3
+            }
+          ]
+        },
+        {
+          "id_produk": "P05",
+          "nama_produk": "Ayam Goreng + Nasi",
+          "harga_jual": 20000,
+          "hpp_baseline": 10155,
+          "hpp": 10987,
+          "perubahan_persen": 8.2,
+          "margin_persen": 45.1,
+          "margin_awal_persen": 49.2,
+          "keputusan": "PERTAHANKAN",
+          "urgensi": "",
+          "harga_saran": null,
+          "kenaikan_rp": null,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "HPP berubah +8,2%, masih dalam batas wajar (naik 10,0% / turun 10,0%).",
+          "rincian": [
+            {
+              "bahan": "Daging ayam",
+              "satuan": "kg",
+              "takaran": 0.15,
+              "harga_rata2": 41971,
+              "biaya": 6296,
+              "porsi_persen": 57.3
+            },
+            {
+              "bahan": "Beras",
+              "satuan": "kg",
+              "takaran": 0.15,
+              "harga_rata2": 14371,
+              "biaya": 2156,
+              "porsi_persen": 19.6
+            },
+            {
+              "bahan": "Cabai merah keriting",
+              "satuan": "kg",
+              "takaran": 0.02,
+              "harga_rata2": 56829,
+              "biaya": 1137,
+              "porsi_persen": 10.3
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.06,
+              "harga_rata2": 18143,
+              "biaya": 1089,
+              "porsi_persen": 9.9
+            },
+            {
+              "bahan": "Bawang putih",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 31086,
+              "biaya": 311,
+              "porsi_persen": 2.8
+            }
+          ]
+        },
+        {
+          "id_produk": "P02",
+          "nama_produk": "Mie Goreng",
+          "harga_jual": 15000,
+          "hpp_baseline": 5836,
+          "hpp": 6268,
+          "perubahan_persen": 7.4,
+          "margin_persen": 58.2,
+          "margin_awal_persen": 61.1,
+          "keputusan": "PERTAHANKAN",
+          "urgensi": "",
+          "harga_saran": null,
+          "kenaikan_rp": null,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "HPP berubah +7,4%, masih dalam batas wajar (naik 10,0% / turun 10,0%).",
+          "rincian": [
+            {
+              "bahan": "Mie telur",
+              "satuan": "kg",
+              "takaran": 0.12,
+              "harga_rata2": 20343,
+              "biaya": 2441,
+              "porsi_persen": 38.9
+            },
+            {
+              "bahan": "Telur ayam",
+              "satuan": "kg",
+              "takaran": 0.06,
+              "harga_rata2": 33986,
+              "biaya": 2039,
+              "porsi_persen": 32.5
+            },
+            {
+              "bahan": "Cabai merah keriting",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 56829,
+              "biaya": 568,
+              "porsi_persen": 9.1
+            },
+            {
+              "bahan": "Kecap manis",
+              "satuan": "liter",
+              "takaran": 0.015,
+              "harga_rata2": 28043,
+              "biaya": 421,
+              "porsi_persen": 6.7
+            },
+            {
+              "bahan": "Minyak goreng",
+              "satuan": "liter",
+              "takaran": 0.02,
+              "harga_rata2": 18143,
+              "biaya": 363,
+              "porsi_persen": 5.8
+            },
+            {
+              "bahan": "Bawang merah",
+              "satuan": "kg",
+              "takaran": 0.01,
+              "harga_rata2": 28043,
+              "biaya": 280,
+              "porsi_persen": 4.5
+            },
+            {
+              "bahan": "Bawang putih",
+              "satuan": "kg",
+              "takaran": 0.005,
+              "harga_rata2": 31086,
+              "biaya": 155,
+              "porsi_persen": 2.5
+            }
+          ]
+        },
+        {
+          "id_produk": "P06",
+          "nama_produk": "Es Teh Manis",
+          "harga_jual": 4000,
+          "hpp_baseline": 780,
+          "hpp": 779,
+          "perubahan_persen": -0.1,
+          "margin_persen": 80.5,
+          "margin_awal_persen": 80.5,
+          "keputusan": "PERTAHANKAN",
+          "urgensi": "",
+          "harga_saran": null,
+          "kenaikan_rp": null,
+          "diskon_maks_persen": null,
+          "hemat_per_porsi": null,
+          "keterangan": "HPP berubah -0,1%, masih dalam batas wajar (naik 10,0% / turun 10,0%).",
+          "rincian": [
+            {
+              "bahan": "Gula pasir",
+              "satuan": "kg",
+              "takaran": 0.025,
+              "harga_rata2": 17957,
+              "biaya": 449,
+              "porsi_persen": 57.6
+            },
+            {
+              "bahan": "Teh bubuk",
+              "satuan": "kg",
+              "takaran": 0.006,
+              "harga_rata2": 54986,
+              "biaya": 330,
+              "porsi_persen": 42.4
+            }
+          ]
+        }
+      ]
+    },
+    "bahan": [
+      {
+        "nama": "Bawang merah",
+        "satuan": "kg",
+        "harga_terakhir": 28000,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": -4.4
+      },
+      {
+        "nama": "Bawang putih",
+        "satuan": "kg",
+        "harga_terakhir": 30900,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": -0.3
+      },
+      {
+        "nama": "Beras",
+        "satuan": "kg",
+        "harga_terakhir": 14400,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 0.7
+      },
+      {
+        "nama": "Cabai merah keriting",
+        "satuan": "kg",
+        "harga_terakhir": 59000,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 11.3
+      },
+      {
+        "nama": "Cabai rawit merah",
+        "satuan": "kg",
+        "harga_terakhir": 97600,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 15.1
+      },
+      {
+        "nama": "Daging ayam",
+        "satuan": "kg",
+        "harga_terakhir": 42600,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 4.9
+      },
+      {
+        "nama": "Gula pasir",
+        "satuan": "kg",
+        "harga_terakhir": 18000,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 0
+      },
+      {
+        "nama": "Kecap manis",
+        "satuan": "liter",
+        "harga_terakhir": 28000,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 0
+      },
+      {
+        "nama": "Kol",
+        "satuan": "kg",
+        "harga_terakhir": 8900,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": -2.2
+      },
+      {
+        "nama": "Mie telur",
+        "satuan": "kg",
+        "harga_terakhir": 20500,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 1.5
+      },
+      {
+        "nama": "Minyak goreng",
+        "satuan": "liter",
+        "harga_terakhir": 18200,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 0.6
+      },
+      {
+        "nama": "Pisang kepok",
+        "satuan": "kg",
+        "harga_terakhir": 10700,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": -9.3
+      },
+      {
+        "nama": "Teh bubuk",
+        "satuan": "kg",
+        "harga_terakhir": 54700,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": -0.7
+      },
+      {
+        "nama": "Telur ayam",
+        "satuan": "kg",
+        "harga_terakhir": 35000,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": 7.4
+      },
+      {
+        "nama": "Tepung terigu",
+        "satuan": "kg",
+        "harga_terakhir": 10600,
+        "tanggal_terakhir": "2026-10-02",
+        "pembanding_tanggal": "2026-09-25",
+        "perubahan_persen": -2.8
+      }
+    ]
+  }
+}

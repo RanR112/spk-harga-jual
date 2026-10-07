@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Kol",
+      "satuan": "kg",
+      "harga": 8900,
+      "urut": 449
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Pisang kepok",
+      "satuan": "kg",
+      "harga": 10700,
+      "urut": 448
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Kecap manis",
+      "satuan": "liter",
+      "harga": 28000,
+      "urut": 447
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Tepung terigu",
+      "satuan": "kg",
+      "harga": 10600,
+      "urut": 446
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Teh bubuk",
+      "satuan": "kg",
+      "harga": 54700,
+      "urut": 445
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Mie telur",
+      "satuan": "kg",
+      "harga": 20500,
+      "urut": 444
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Gula pasir",
+      "satuan": "kg",
+      "harga": 18000,
+      "urut": 443
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Bawang putih",
+      "satuan": "kg",
+      "harga": 30900,
+      "urut": 442
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Bawang merah",
+      "satuan": "kg",
+      "harga": 28000,
+      "urut": 441
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Cabai merah keriting",
+      "satuan": "kg",
+      "harga": 59000,
+      "urut": 440
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Cabai rawit merah",
+      "satuan": "kg",
+      "harga": 97600,
+      "urut": 439
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Minyak goreng",
+      "satuan": "liter",
+      "harga": 18200,
+      "urut": 438
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Daging ayam",
+      "satuan": "kg",
+      "harga": 42600,
+      "urut": 437
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Telur ayam",
+      "satuan": "kg",
+      "harga": 35000,
+      "urut": 436
+    },
+    {
+      "tanggal": "2026-10-02",
+      "bahan": "Beras",
+      "satuan": "kg",
+      "harga": 14400,
+      "urut": 435
+    }
+  ]
+}

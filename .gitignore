@@ -11,6 +11,7 @@ claude/
 CLAUDE.md
 design/
 legacy/
-docs/
+docs/*
+!docs/fixtures/
 scripts/
 README.md

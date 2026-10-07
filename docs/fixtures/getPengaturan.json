@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "data": {
+    "batas_naik_persen": 10,
+    "batas_turun_persen": 10,
+    "margin_target_persen": 45,
+    "margin_minimum_persen": 35,
+    "pembulatan": 500,
+    "periode_moving_average_hari": 7
+  }
+}
