@@ -1,0 +1,14 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+// Form sempit di kiri, tabel di kanan; menumpuk di layar HP.
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $sp-4;
+  align-items: start;
+
+  @include up($bp-md) {
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+  }
+}

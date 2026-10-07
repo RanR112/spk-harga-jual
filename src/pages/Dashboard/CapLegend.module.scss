@@ -1,0 +1,35 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+.intro {
+  margin-bottom: $sp-4;
+  font-size: $fs-tabel;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: $sp-3;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid $garis-buku;
+    font-size: $fs-tabel;
+
+    &:first-child {
+      border-top: 1px solid $garis-buku;
+    }
+
+    @include down($bp-md) {
+      grid-template-columns: 104px 1fr;
+    }
+  }
+}
+
+.cap {
+  justify-self: start;
+}

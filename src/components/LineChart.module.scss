@@ -1,0 +1,22 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+// Bingkai grafik: garis atas hijau tebal dan garis bawah tipis, seperti kolom di buku kas.
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: $chart-height;
+  border-top: 2px solid $hijau-buku;
+  border-bottom: 1px solid $garis-buku;
+  background: $kertas;
+
+  // Geser vertikal tetap menggulir halaman; geser mendatar membaca nilai.
+  canvas {
+    touch-action: pan-y;
+  }
+
+  @include down($bp-sm) {
+    height: $chart-height-sm;
+  }
+}

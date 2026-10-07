@@ -1,0 +1,17 @@
+@use '../styles/tokens' as *;
+
+.reading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px $sp-4;
+  min-height: $touch-min;
+  padding: $sp-2 0;
+  font-size: $fs-kecil;
+
+  b {
+    font-family: $font-angka;
+    font-size: $fs-tabel;
+    font-weight: $fw-semibold;
+  }
+}

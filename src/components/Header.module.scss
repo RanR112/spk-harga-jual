@@ -1,0 +1,134 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+// Kepala buku kas: garis atas tebal dan garis bawah ganda berwarna hijau buku.
+.header {
+  border-top: 6px solid $hijau-buku;
+  border-bottom: 4px double $hijau-buku;
+  background: $kertas;
+}
+
+.wrap {
+  max-width: $lebar;
+  margin: 0 auto;
+  padding-inline: $gutter;
+
+  @include down($bp-md) {
+    padding-inline: $gutter-sm;
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $sp-5;
+  padding-block: $sp-5 $sp-4;
+
+  // Tombol tema tetap di kanan atas; stempel tanggal dan "Muat ulang" turun ke baris kedua.
+  @include down($bp-md) {
+    display: grid;
+    grid-template-areas:
+      'brand brand theme'
+      'stamp reload reload';
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: $sp-3;
+    padding-block: $sp-4 $sp-3;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $sp-4;
+  min-width: 0;
+
+  @include down($bp-md) {
+    grid-area: brand;
+  }
+}
+
+.logo {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  color: $hijau-buku;
+
+  @include down($bp-md) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.titles {
+  min-width: 0;
+}
+
+.title {
+  font-size: $fs-judul;
+  font-weight: $fw-semibold;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+
+  @include down($bp-md) {
+    font-size: 22px;
+  }
+}
+
+.subtitle {
+  margin-top: 2px;
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+
+  @include down($bp-md) {
+    font-size: 13.5px;
+  }
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: $sp-3;
+
+  // Anak-anaknya menjadi sel grid .inner di layar sempit.
+  @include down($bp-md) {
+    display: contents;
+  }
+}
+
+// "Stempel" tanggal data: kotak bergaris ganda tipis, angka monospasi.
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  min-height: $touch-min;
+  padding: 0 $sp-3;
+  border: 1.5px solid $hijau-buku;
+  border-radius: $radius;
+  box-shadow: inset 0 0 0 2px $kertas, inset 0 0 0 3px $garis-buku;
+  color: $hijau-buku;
+  font-family: $font-angka;
+  font-size: $fs-kecil;
+  font-weight: $fw-medium;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  @include down($bp-md) {
+    grid-area: stamp;
+    justify-self: start;
+  }
+}
+
+.reload {
+  @include down($bp-md) {
+    grid-area: reload;
+    justify-self: end;
+  }
+}
+
+.theme {
+  @include down($bp-md) {
+    grid-area: theme;
+    justify-self: end;
+  }
+}

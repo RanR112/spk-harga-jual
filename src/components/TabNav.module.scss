@@ -1,0 +1,61 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+// Di layar HP tab bisa digeser ke samping tanpa membuat halaman ikut melebar.
+.nav {
+  margin-inline: -$gutter;
+  padding-inline: $gutter;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include down($bp-md) {
+    margin-inline: -$gutter-sm;
+    padding-inline: $gutter-sm;
+  }
+}
+
+.list {
+  display: flex;
+  min-width: max-content;
+}
+
+.tab {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 $sp-4;
+  border-bottom: 3px solid transparent;
+  color: $tinta-redam;
+  font-size: $fs-tabel;
+  font-weight: $fw-medium;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:hover {
+    background: $hover;
+    color: $tinta;
+  }
+
+  &:focus-visible {
+    outline-offset: -3px;
+  }
+}
+
+.active {
+  border-bottom-color: $hijau-buku;
+  color: $hijau-buku;
+  font-weight: $fw-bold;
+
+  &:hover {
+    color: $hijau-buku;
+  }
+}

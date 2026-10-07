@@ -1,0 +1,125 @@
+// Sumber: docs/04-desain-token.md, diambil dari design/mockups/opsi-b-buku-kas/style.css (Opsi B "Buku Kas").
+// Komponen tidak boleh menulis warna mentah, selalu lewat token ini.
+
+// ---------- Palet warna ----------
+// Satu-satunya tempat nilai warna mentah. Tiap palet dipancarkan sebagai variabel CSS lewat
+// mixin `emit-palette` (global.scss), jadi tema berganti saat runtime tanpa mengubah komponen.
+// Komponen tetap memakai nama token SCSS di bawah ($tinta, $hijau-buku, ...).
+
+// Terang: identik dengan :root di style.css mockup. Rasio kontras ada di design/KONTRAS.md.
+$palette-light: (
+  kertas: #FFFFFF,         // latar halaman dan tabel
+  tinta: #10231C,          // teks utama                     16,42:1
+  tinta-redam: #4A5A52,    // teks sekunder, label, catatan   7,30:1
+  garis-buku: #BFD3C8,     // garis buku hijau pucat: hiasan pemisah, bukan teks dan bukan batas elemen
+  baris-judul: #E7F0EA,    // header tabel dan baris kelompok
+  hijau-buku: #0B5D46,     // aksen, tab aktif, tautan, fokus 7,87:1
+  hijau-tua: #07483A,      // hover tombol utama
+  hover: #F3F8F5,          // hover baris
+  tepi-ui: #6B7F74,        // tepi isian dan tombol nonaktif  4,27:1
+  naik: #9F2D0A,           // NAIKKAN HARGA                   7,36:1
+  promo: #0B5D46,          // BERI PROMO                      7,87:1
+  tahan: #5F5200,          // PERTAHANKAN                     7,80:1
+  data: #4B5563,           // DATA TIDAK LENGKAP              7,56:1
+  overlay: rgba(16, 35, 28, .55),
+);
+
+// Gelap: dirancang saat penerapan (mockup tidak punya). Nama token sama dengan palet terang.
+// Teks di atas latar hijau-buku atau naik memakai $kertas, yang di tema ini gelap (8,9:1).
+$palette-dark: (
+  kertas: #0F1A16,
+  tinta: #E6EFEA,          // 15,17:1
+  tinta-redam: #A8BAB1,    //  8,75:1
+  garis-buku: #2E4439,
+  baris-judul: #172A21,
+  hijau-buku: #5FCBA2,     //  8,94:1
+  hijau-tua: #8BE0BF,
+  hover: #15251E,
+  tepi-ui: #6F8C7D,        //  4,85:1
+  naik: #FF9F80,           //  8,92:1
+  promo: #5FCBA2,
+  tahan: #E0C65C,          // 10,51:1
+  data: #AEBBC9,           //  9,11:1
+  overlay: rgba(0, 0, 0, .65),
+);
+
+// ---------- Token warna (merujuk variabel CSS) ----------
+$kertas: var(--kertas);
+$tinta: var(--tinta);
+$tinta-redam: var(--tinta-redam);
+$garis-buku: var(--garis-buku);
+$baris-judul: var(--baris-judul);
+$hijau-buku: var(--hijau-buku);
+$hijau-tua: var(--hijau-tua);
+$hover: var(--hover);
+$tepi-ui: var(--tepi-ui);
+$overlay: var(--overlay);
+
+// ---------- Warna keputusan ----------
+$naik: var(--naik);     // NAIKKAN HARGA
+$promo: var(--promo);   // BERI PROMO
+$tahan: var(--tahan);   // PERTAHANKAN
+$data: var(--data);     // DATA TIDAK LENGKAP
+
+// ---------- Warna grafik ----------
+$chart-hpp: $tinta;
+$chart-bahan: $tinta;
+$chart-baseline: $tinta-redam;
+$chart-naik: $naik;
+$chart-promo: $promo;
+$chart-grid: $garis-buku;
+$chart-text: $tinta-redam;
+$chart-zona: $hover;
+$chart-permukaan: $kertas;
+
+// ---------- Font ----------
+// Dibundel lewat @fontsource (src/main.tsx), jadi tidak ada permintaan ke server font saat runtime.
+$font-teks: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+$font-angka: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, 'SF Mono', monospace;
+
+// ---------- Ukuran huruf ----------
+$fs-mini: 12px;     // kode produk, judul kolom tabel mini
+$fs-label: 13px;    // judul kolom, cap, urgensi, judul kecil
+$fs-kecil: 14px;    // teks bantu, catatan, penjelas
+$fs-tabel: 15px;    // isi tabel, tombol, label isian
+$fs-isi: 16px;      // teks isi
+$fs-nama: 17px;     // nama produk, selisih
+$fs-seksi: 18px;    // judul seksi
+$fs-ringkas: 20px;  // baris ringkasan
+$fs-saran: 21px;    // harga saran di tabel
+$fs-judul: 26px;    // judul aplikasi
+
+$fw-reguler: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$lh-base: 1.5;
+
+// ---------- Spasi ----------
+$sp-1: 4px;
+$sp-2: 8px;
+$sp-3: 12px;
+$sp-4: 16px;
+$sp-5: 24px;
+$sp-6: 32px;
+$sp-7: 48px;
+
+// ---------- Bentuk ----------
+$radius: 3px;           // buku kas bersudut tajam
+$tinggi-baris: 64px;    // baris tabel utama
+$touch-min: 44px;
+
+// ---------- Layout ----------
+$lebar: 1200px;         // lebar maksimal termasuk gutter
+$gutter: 24px;
+$gutter-sm: 16px;       // di bawah $bp-md
+$chart-height: 360px;
+$chart-height-sm: 300px; // di bawah $bp-sm
+
+// ---------- Titik patah ----------
+$bp-md: 960px;          // di bawahnya: tata letak HP
+$bp-sm: 560px;          // grafik dan tabel data diperkecil
+
+// ---------- Lain-lain ----------
+$z-modal: 50;
+$z-toast: 60;

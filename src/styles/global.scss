@@ -1,0 +1,99 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+// Tema dipilih lewat atribut data-theme pada <html> (diatur utils/theme.ts). `color-scheme`
+// membuat kontrol bawaan browser (input tanggal, dropdown, scrollbar) ikut berganti.
+// Palet terang juga menjadi cadangan kalau atributnya belum terpasang.
+:root {
+  color-scheme: light;
+  @include emit-palette($palette-light);
+
+  // Dibaca oleh utils/chartColors.ts agar grafik memakai token yang sama dengan komponen lain.
+  --chart-hpp: #{$chart-hpp};
+  --chart-bahan: #{$chart-bahan};
+  --chart-baseline: #{$chart-baseline};
+  --chart-naik: #{$chart-naik};
+  --chart-promo: #{$chart-promo};
+  --chart-grid: #{$chart-grid};
+  --chart-text: #{$chart-text};
+  --chart-zona: #{$chart-zona};
+  --chart-permukaan: #{$chart-permukaan};
+  --font-teks: #{$font-teks};
+  --font-angka: #{$font-angka};
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  @include emit-palette($palette-dark);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: $kertas;
+  color: $tinta;
+  font-family: $font-teks;
+  font-size: $fs-isi;
+  font-weight: $fw-reguler;
+  line-height: $lh-base;
+  overflow-x: hidden;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  color: $hijau-buku;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: $hijau-tua;
+  }
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,70 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $gutter-sm;
+  background: $overlay;
+}
+
+// Halaman buku yang dibuka di atas meja: tepi hijau, sudut tajam, tanpa bayangan.
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 920px;
+  max-height: calc(100vh - #{$gutter-sm * 2});
+  max-height: calc(100dvh - #{$gutter-sm * 2});
+  background: $kertas;
+  border: 1.5px solid $hijau-buku;
+  border-top-width: 6px;
+  border-radius: $radius;
+
+  // Dialog hanya penampung fokus awal; elemen di dalamnya tetap punya cincin fokus sendiri.
+  &:focus {
+    outline: none;
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-3 $sp-4;
+  padding: $sp-4 $sp-5;
+  border-bottom: 3px double $hijau-buku;
+}
+
+.title {
+  font-size: $fs-judul;
+  font-weight: $fw-semibold;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+
+  @include down($bp-md) {
+    font-size: 22px;
+  }
+}
+
+.body {
+  min-height: 0;
+  padding: $sp-4 $sp-5;
+  overflow-y: auto;
+
+  @include down($bp-md) {
+    padding: $sp-4;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: $sp-3 $sp-5;
+  border-top: 1px solid $garis-buku;
+}

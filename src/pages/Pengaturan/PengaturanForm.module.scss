@@ -1,0 +1,21 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $sp-4;
+}
+
+// Pesan validasi dari server: kotak bertepi warna naik dengan huruf tebal, bukan hanya warna.
+.error {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: $sp-3;
+  border: 2px solid $naik;
+  border-radius: $radius;
+  color: $naik;
+  font-size: $fs-kecil;
+  font-weight: $fw-semibold;
+}

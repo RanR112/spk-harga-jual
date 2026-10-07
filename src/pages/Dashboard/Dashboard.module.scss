@@ -1,0 +1,72 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+.page {
+  display: block;
+}
+
+// Baris ringkasan (filter) di kiri, tombol simpan di kanan.
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $sp-4;
+  padding-bottom: $sp-2;
+}
+
+.save {
+  @include down($bp-md) {
+    width: 100%;
+  }
+}
+
+.hint {
+  padding-bottom: $sp-4;
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+}
+
+// Petunjuk arah panah di tabel dua baris, hanya relevan di HP.
+.phoneOnly {
+  display: none;
+
+  @include down($bp-md) {
+    display: block;
+  }
+}
+
+// Bahan bergerak dan cara membaca cap berdampingan; menumpuk di HP.
+.lower {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: $sp-7;
+  align-items: start;
+  margin-top: $sp-7;
+
+  @include down($bp-md) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: $sp-6;
+    margin-top: $sp-6;
+  }
+}
+
+// Catatan kaki dengan garis pendek di atasnya, seperti catatan di bawah halaman buku.
+.footnote {
+  position: relative;
+  max-width: 92ch;
+  margin-top: $sp-7;
+  padding-top: $sp-3;
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+  line-height: 1.55;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    border-top: 1.5px solid $tinta-redam;
+  }
+}

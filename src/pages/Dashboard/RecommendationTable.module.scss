@@ -1,0 +1,328 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+// Tabel utama dashboard, dikerjakan menurut mockup Opsi B (style.css bagian "Tabel buku" dan "Tabel utama").
+.table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: $fs-tabel;
+
+  th,
+  td {
+    padding: 14px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  // Pemisah kolom garis buku, dengan garis ganda setelah kolom produk.
+  td + td,
+  thead th + th {
+    border-left: 1px solid $garis-buku;
+  }
+
+  td:nth-child(2),
+  thead th:nth-child(2) {
+    border-left: 3px double $garis-buku;
+  }
+
+  tbody td {
+    border-bottom: 1px solid $garis-buku;
+  }
+
+  thead th {
+    @include label-kapital;
+    padding-block: 12px;
+    border-top: 2px solid $hijau-buku;
+    border-bottom: 3px double $hijau-buku;
+    background: $baris-judul;
+    color: $tinta;
+  }
+
+  .num {
+    text-align: right;
+  }
+
+  td.num {
+    @include num-cell;
+  }
+}
+
+.colProduk { width: auto; }
+.colSekarang { width: 170px; }
+.colSaran { width: 300px; }
+.colSelisih { width: 150px; }
+.colPutusan { width: 170px; }
+
+// ---------- Baris judul kelompok ----------
+.groupRow th {
+  padding: 12px 14px;
+  border-top: 2px solid $garis-buku;
+  border-bottom: 1px solid $garis-buku;
+  border-left: 0;
+  background: $baris-judul;
+  font-size: $fs-tabel;
+  font-weight: $fw-bold;
+}
+
+.groupContent {
+  display: flex;
+  align-items: baseline;
+  gap: $sp-3;
+}
+
+.groupName {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  font-weight: $fw-bold;
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.groupCount {
+  font-family: $font-angka;
+  font-weight: $fw-semibold;
+}
+
+.groupRule {
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+  font-weight: $fw-reguler;
+}
+
+.naik { color: $naik; }
+.promo { color: $promo; }
+.tahan { color: $tahan; }
+.data { color: $data; }
+
+// ---------- Baris produk ----------
+.row {
+  cursor: pointer;
+
+  td {
+    height: $tinggi-baris;
+    background: $kertas;
+  }
+
+  &:hover td {
+    background: $hover;
+  }
+}
+
+.open {
+  display: flex;
+  align-items: flex-start;
+  gap: $sp-3;
+  width: 100%;
+  min-height: $touch-min;
+  padding: 0;
+  border: 0;
+  border-radius: $radius;
+  background: none;
+  text-align: left;
+}
+
+.arrow {
+  flex: none;
+  margin-top: 4px;
+  color: $hijau-buku;
+}
+
+.nameBlock {
+  display: block;
+  min-width: 0;
+}
+
+.name {
+  display: block;
+  font-size: $fs-nama;
+  font-weight: $fw-semibold;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.kode {
+  display: block;
+  margin-top: 2px;
+  color: $tinta-redam;
+  font-family: $font-angka;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.cSaran {
+  text-align: right;
+}
+
+.cSelisih {
+  font-size: $fs-nama;
+  font-weight: $fw-bold;
+}
+
+.rise {
+  color: $naik;
+}
+
+.none {
+  color: $tinta-redam;
+  font-weight: $fw-reguler;
+}
+
+.urgency {
+  display: block;
+  margin-top: 5px;
+  color: $tinta-redam;
+  font-size: $fs-label;
+  font-weight: $fw-semibold;
+  line-height: 1.2;
+}
+
+.urgencyHigh {
+  color: $naik;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    background: $naik;
+  }
+}
+
+// ---------- Tata letak HP: tiap baris menjadi entri dua baris ----------
+@include down($bp-md) {
+  .table,
+  .table > tbody,
+  .table > tbody > tr,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > thead {
+    display: block;
+  }
+
+  .table {
+    border-top: 2px solid $hijau-buku;
+
+    // Judul kolom tetap ada untuk pembaca layar, tetapi tidak terlihat.
+    > thead {
+      @include visually-hidden;
+    }
+
+    colgroup {
+      display: none;
+    }
+  }
+
+  .groupRow {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    th {
+      padding: 10px $sp-4;
+      border-top: 0;
+      border-bottom: 2px solid $garis-buku;
+    }
+  }
+
+  .groupRule {
+    display: none;
+  }
+
+  .table > tbody > tr.row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    column-gap: $sp-3;
+    row-gap: $sp-1;
+    align-items: center;
+    padding: $sp-3 $sp-4;
+    border-bottom: 1px solid $garis-buku;
+    background: $kertas;
+
+    &:hover {
+      background: $hover;
+    }
+
+    > td {
+      display: block;
+      height: auto;
+      padding: 0;
+      border: 0;
+      background: none;
+    }
+
+    &:hover > td {
+      background: none;
+    }
+
+    // Kolom saran dilepas dari sel supaya tiap bagiannya bisa ditempatkan di grid baris.
+    > td.cSaran {
+      display: contents;
+    }
+  }
+
+  .cProduk {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .cPutusan {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: right;
+  }
+
+  .cSelisih {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: $fs-tabel;
+  }
+
+  // Lebih spesifik daripada `td.num` (rata kanan) di atas.
+  .table > tbody > tr.row > td.cSelisih {
+    text-align: left;
+  }
+
+  .cSekarang {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: right;
+    font-size: $fs-tabel;
+
+    &::after {
+      content: ' \2192';
+      color: $tinta-redam;
+      font-family: $font-teks;
+    }
+  }
+
+  .row {
+    // Selisih hanya berarti untuk keputusan naik.
+    &[data-keputusan='promo'] .cSelisih,
+    &[data-keputusan='tahan'] .cSelisih,
+    &[data-keputusan='data'] .cSelisih {
+      display: none;
+    }
+  }
+
+  .open {
+    align-items: center;
+    min-height: $touch-min;
+  }
+
+  .kode {
+    display: none;
+  }
+
+  .name {
+    font-size: $fs-isi;
+  }
+
+  .cPutusan .urgency {
+    margin-top: 3px;
+  }
+}

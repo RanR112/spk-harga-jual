@@ -1,0 +1,76 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+.table {
+  width: 100%;
+  font-size: $fs-tabel;
+
+  th,
+  td {
+    padding: 14px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  td + td,
+  th + th {
+    border-left: 1px solid $garis-buku;
+  }
+
+  thead th {
+    @include label-kapital;
+    padding-block: 12px;
+    border-top: 1px solid $hijau-buku;
+    border-bottom: 3px double $hijau-buku;
+    background: $baris-judul;
+    color: $tinta;
+  }
+
+  tbody td {
+    height: 52px;
+    border-bottom: 1px solid $garis-buku;
+  }
+
+  th.num {
+    text-align: right;
+  }
+
+  td.num {
+    @include num-cell;
+  }
+
+  @include down($bp-md) {
+    th,
+    td {
+      padding-inline: 10px;
+    }
+  }
+}
+
+.name {
+  font-weight: $fw-semibold;
+}
+
+.unit {
+  margin-left: 1px;
+  color: $tinta-redam;
+  font-family: $font-teks;
+  font-size: 13px;
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: $fw-semibold;
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// Harga bahan naik buruk bagi margin, jadi warna naik; turun memakai warna promo.
+.up { color: $naik; }
+.down { color: $promo; }
+.flat { color: $tinta-redam; }

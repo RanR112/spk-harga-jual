@@ -1,0 +1,102 @@
+@use 'tokens' as *;
+
+@mixin num-cell {
+  text-align: right;
+  font-family: $font-angka;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@mixin focus-ring {
+  outline: 3px solid $hijau-buku;
+  outline-offset: 2px;
+}
+
+// Mengubah peta palet menjadi deklarasi variabel CSS, misalnya `--tinta: #10231C;`.
+@mixin emit-palette($palette) {
+  @each $name, $value in $palette {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin up($bp) {
+  @media (min-width: $bp) { @content; }
+}
+
+// Tata letak HP: lebar layar di bawah $bp.
+@mixin down($bp) {
+  @media (max-width: #{$bp - 1px}) { @content; }
+}
+
+// Teks hanya untuk pembaca layar.
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin hint {
+  font-size: $fs-kecil;
+  color: $tinta-redam;
+}
+
+// Judul kecil huruf kapital, dipakai di header tabel dan bagian rincian.
+@mixin label-kapital {
+  font-size: $fs-label;
+  font-weight: $fw-semibold;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+// Judul seksi: teks tebal dengan garis ganda hijau di bawahnya, seperti penutup kolom di buku kas.
+@mixin judul-seksi($size: $fs-seksi) {
+  margin: 0 0 $sp-3;
+  padding-bottom: $sp-2;
+  border-bottom: 3px double $hijau-buku;
+  font-size: $size;
+  font-weight: $fw-semibold;
+  line-height: 1.3;
+}
+
+// Kertas bergaris: latar garis horizontal tiap 40px.
+@mixin kertas-garis {
+  background-image: repeating-linear-gradient(to bottom, transparent 0 39px, $garis-buku 39px 40px);
+}
+
+// Tombol dasar. Varian warna ditambahkan di Button.module.scss.
+@mixin tombol-dasar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-2;
+  min-height: $touch-min;
+  padding: 0 $sp-4;
+  border: 1.5px solid $hijau-buku;
+  border-radius: $radius;
+  background: $kertas;
+  color: $hijau-buku;
+  font-size: $fs-tabel;
+  font-weight: $fw-semibold;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: $baris-judul;
+    color: $hijau-tua;
+  }
+
+  svg {
+    flex: none;
+    width: 18px;
+    height: 18px;
+  }
+}

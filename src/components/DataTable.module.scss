@@ -1,0 +1,88 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.scroller {
+  // position: relative agar teks khusus pembaca layar (position: absolute) ikut terpotong di wadah ini
+  // dan tidak melebarkan halaman.
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Tabel buku: header hijau pucat dengan garis ganda, pemisah kolom garis buku, angka bertabulasi.
+.table {
+  width: 100%;
+  font-size: $fs-tabel;
+
+  th,
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid $garis-buku;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  td + td,
+  th + th {
+    border-left: 1px solid $garis-buku;
+  }
+
+  th {
+    @include label-kapital;
+    padding-block: 12px;
+    border-top: 2px solid $hijau-buku;
+    border-bottom: 3px double $hijau-buku;
+    background: $baris-judul;
+    color: $tinta;
+    white-space: nowrap;
+  }
+
+  tbody tr:hover td {
+    background: $hover;
+  }
+
+  tfoot td,
+  tfoot th {
+    border-top: 1px solid $tinta;
+    border-bottom: 3px double $tinta;
+    background: $kertas;
+    font-weight: $fw-bold;
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: $fs-tabel;
+  }
+
+  th.num {
+    text-align: right;
+  }
+
+  td.num {
+    @include num-cell;
+  }
+
+  th.nowrap,
+  td.nowrap {
+    white-space: nowrap;
+  }
+
+  td.nowrap {
+    font-family: $font-angka;
+  }
+}
+
+// Layar sempit: tabel dipadatkan dan judul kolom boleh turun baris, supaya tabel tiga kolom muat tanpa geser.
+.table {
+  @include down($bp-sm) {
+    font-size: $fs-kecil;
+
+    th,
+    td {
+      padding-inline: 10px;
+    }
+
+    th {
+      white-space: normal;
+    }
+  }
+}

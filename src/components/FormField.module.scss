@@ -1,0 +1,55 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  input,
+  select {
+    width: 100%;
+    min-height: $touch-min;
+    padding: 0 $sp-3;
+    border: 1.5px solid $tepi-ui;
+    border-radius: $radius;
+    background-color: $kertas;
+    font-size: $fs-isi;
+
+    &:hover {
+      border-color: $tinta;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $hijau-buku;
+      outline-offset: 1px;
+      border-color: $hijau-buku;
+    }
+  }
+
+  input[type='number'],
+  input[type='date'] {
+    font-family: $font-angka;
+  }
+
+  // Panah dropdown digambar dengan gradien berwarna token (bukan SVG data-URI) agar ikut berganti tema.
+  select {
+    appearance: none;
+    padding-right: 36px;
+    background-image:
+      linear-gradient(45deg, transparent 44%, $tinta 44%, $tinta 56%, transparent 56%),
+      linear-gradient(135deg, transparent 44%, $tinta 44%, $tinta 56%, transparent 56%);
+    background-position: right 17px center, right 11px center;
+    background-size: 8px 8px, 8px 8px;
+    background-repeat: no-repeat;
+  }
+}
+
+.label {
+  font-size: $fs-tabel;
+  font-weight: $fw-semibold;
+}
+
+.help {
+  @include hint;
+}

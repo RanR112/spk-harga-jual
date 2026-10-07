@@ -1,0 +1,48 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.card {
+  min-width: 0; // agar tabel di dalam grid bisa digeser, bukan melebarkan halaman
+}
+
+.box {
+  padding: $sp-5;
+  border: 1.5px solid $hijau-buku;
+  border-radius: $radius;
+
+  @include down($bp-md) {
+    padding: $sp-4;
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $sp-2 $sp-4;
+  margin-bottom: $sp-3;
+  padding-bottom: $sp-2;
+  border-bottom: 3px double $hijau-buku;
+}
+
+.title {
+  font-size: $fs-seksi;
+  font-weight: $fw-semibold;
+  line-height: 1.3;
+}
+
+.box .title {
+  font-size: 17px;
+}
+
+.actions {
+  display: flex;
+  gap: $sp-2;
+}
+
+.footer {
+  @include hint;
+  margin-top: $sp-3;
+  padding-inline: $sp-1;
+}

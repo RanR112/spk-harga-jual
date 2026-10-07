@@ -1,0 +1,21 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.button {
+  @include tombol-dasar;
+
+  &:disabled {
+    border-color: $tepi-ui;
+    background: $baris-judul;
+    color: $tinta-redam;
+    cursor: progress;
+  }
+}
+
+.spinning {
+  animation: putar .9s linear infinite;
+}
+
+@keyframes putar {
+  to { transform: rotate(360deg); }
+}

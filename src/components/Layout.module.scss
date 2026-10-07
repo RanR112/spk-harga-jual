@@ -1,0 +1,40 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.app {
+  min-height: 100vh;
+}
+
+.main {
+  max-width: $lebar;
+  margin: 0 auto;
+  padding: $sp-5 $gutter $sp-7;
+
+  @include down($bp-md) {
+    padding-inline: $gutter-sm;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Tautan "Lewati ke konten": tersembunyi sampai mendapat fokus keyboard.
+.skip {
+  @include visually-hidden;
+
+  &:focus {
+    position: fixed;
+    top: $sp-2;
+    left: $sp-4;
+    z-index: $z-toast;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: $sp-3 $sp-4;
+    clip: auto;
+    border-radius: $radius;
+    background: $hijau-buku;
+    color: $kertas;
+  }
+}

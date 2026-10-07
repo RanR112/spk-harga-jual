@@ -1,0 +1,38 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+// Dua bagian bertumpuk dan selebar halaman, masing-masing berjudul garis ganda.
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-7;
+}
+
+.title {
+  margin: (-$sp-3) 0 (-$sp-5);
+  font-size: 32px;
+  font-weight: $fw-semibold;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+
+  @include down($bp-md) {
+    font-size: $fs-judul;
+  }
+}
+
+.picker {
+  display: flex;
+  margin-bottom: $sp-3;
+
+  > * {
+    flex: 0 1 340px;
+    min-width: min(240px, 100%);
+  }
+}
+
+.note {
+  max-width: 80ch;
+  margin-top: $sp-3;
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+}

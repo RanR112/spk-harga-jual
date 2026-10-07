@@ -1,0 +1,8 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.button {
+  @include tombol-dasar;
+  width: $touch-min;
+  padding: 0;
+}

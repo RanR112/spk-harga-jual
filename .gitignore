@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+test-results/
+playwright-report/
+claude/
+CLAUDE.md
+design/
+legacy/
+docs/
+scripts/
+README.md

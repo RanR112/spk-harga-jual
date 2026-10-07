@@ -1,0 +1,10 @@
+@use '../styles/tokens' as *;
+
+.banner {
+  padding: $sp-2 $gutter-sm;
+  border-bottom: 1px solid $garis-buku;
+  background: $baris-judul;
+  color: $tahan;
+  font-size: $fs-kecil;
+  text-align: center;
+}

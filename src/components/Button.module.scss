@@ -1,0 +1,32 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.button {
+  @include tombol-dasar;
+
+  &:disabled {
+    border-color: $tepi-ui;
+    background: $baris-judul;
+    color: $tinta-redam;
+    cursor: not-allowed;
+  }
+
+  &[aria-busy='true']:disabled {
+    cursor: progress;
+  }
+}
+
+.primary {
+  background: $hijau-buku;
+  color: $kertas;
+
+  &:hover:not(:disabled) {
+    background: $hijau-tua;
+    color: $kertas;
+  }
+}
+
+// Bawaan (tepi hijau, latar kertas) sudah diatur di mixin tombol-dasar.
+.secondary {
+  background: $kertas;
+}

@@ -1,0 +1,70 @@
+@use '../styles/tokens' as *;
+@use '../styles/mixins' as *;
+
+.region {
+  position: fixed;
+  right: $sp-4;
+  bottom: $sp-4;
+  left: $sp-4;
+  z-index: $z-toast;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: $sp-2;
+  pointer-events: none;
+}
+
+// Cap solid di pojok kanan bawah. Teks memakai $kertas agar kontras di kedua tema.
+.toast {
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+  width: 100%;
+  min-height: 48px;
+  max-width: 380px;
+  padding: $sp-1 0 $sp-1 $sp-4;
+  border-left: 6px solid $tinta;
+  border-radius: $radius;
+  color: $kertas;
+  font-size: $fs-tabel;
+  font-weight: $fw-medium;
+  pointer-events: auto;
+
+  @include down($bp-sm) {
+    max-width: none;
+  }
+}
+
+.success {
+  background: $hijau-buku;
+}
+
+.error {
+  background: $naik;
+}
+
+.icon {
+  flex: none;
+}
+
+.message {
+  flex: 1;
+  padding: $sp-2 0;
+}
+
+.close {
+  flex: none;
+  width: $touch-min;
+  height: $touch-min;
+  border: 0;
+  border-radius: $radius;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  line-height: 1;
+
+  &:focus-visible {
+    outline-color: $kertas;
+    outline-offset: -4px;
+  }
+}
