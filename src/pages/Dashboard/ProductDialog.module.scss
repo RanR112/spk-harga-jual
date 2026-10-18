@@ -1,5 +1,5 @@
-@use '../../styles/tokens' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/tokens" as *;
+@use "../../styles/mixins" as *;
 
 // Isi dialog mengikuti baris rincian di mockup: "Perbandingan" di kiri, keterangan dan tabel bahan di kanan.
 .content {
@@ -64,7 +64,67 @@
   }
 }
 
-.naik { color: $naik; }
-.promo { color: $promo; }
-.tahan { color: $tahan; }
-.data { color: $data; }
+// ---------- Skor SAW ----------
+.saw {
+  grid-column: 1 / -1;
+}
+
+.sawScroll {
+  overflow-x: auto;
+}
+
+.sawTable {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: $fs-tabel;
+
+  th,
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid $garis-buku;
+    text-align: left;
+  }
+
+  thead th {
+    @include label-kapital;
+    border-top: 2px solid $hijau-buku;
+    border-bottom: 3px double $hijau-buku;
+    background: $baris-judul;
+    color: $tinta;
+  }
+
+  tbody th {
+    font-weight: $fw-reguler;
+  }
+
+  tfoot th,
+  tfoot td {
+    border-top: 2px solid $garis-buku;
+    border-bottom: 0;
+    font-weight: $fw-bold;
+  }
+
+  .num {
+    font-family: $font-angka;
+    text-align: right;
+  }
+}
+
+.kodeKriteria {
+  font-family: $font-angka;
+  font-weight: $fw-bold;
+}
+
+.naik {
+  color: $naik;
+}
+.promo {
+  color: $promo;
+}
+.tahan {
+  color: $tahan;
+}
+.data {
+  color: $data;
+}

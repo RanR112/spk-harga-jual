@@ -1,5 +1,5 @@
-@use '../../styles/tokens' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/tokens" as *;
+@use "../../styles/mixins" as *;
 
 // Tabel utama dashboard, dikerjakan menurut mockup Opsi B (style.css bagian "Tabel buku" dan "Tabel utama").
 .table {
@@ -47,11 +47,21 @@
   }
 }
 
-.colProduk { width: auto; }
-.colSekarang { width: 170px; }
-.colSaran { width: 300px; }
-.colSelisih { width: 150px; }
-.colPutusan { width: 170px; }
+.colProduk {
+  width: auto;
+}
+.colSekarang {
+  width: 170px;
+}
+.colSaran {
+  width: 300px;
+}
+.colSelisih {
+  width: 150px;
+}
+.colPutusan {
+  width: 170px;
+}
 
 // ---------- Baris judul kelompok ----------
 .groupRow th {
@@ -93,10 +103,18 @@
   font-weight: $fw-reguler;
 }
 
-.naik { color: $naik; }
-.promo { color: $promo; }
-.tahan { color: $tahan; }
-.data { color: $data; }
+.naik {
+  color: $naik;
+}
+.promo {
+  color: $promo;
+}
+.tahan {
+  color: $tahan;
+}
+.data {
+  color: $data;
+}
 
 // ---------- Baris produk ----------
 .row {
@@ -153,6 +171,21 @@
   line-height: 1.4;
 }
 
+// Peringkat prioritas SAW di bawah nama produk. Tetap tampil di HP, tidak seperti kode produk.
+.rank {
+  display: block;
+  margin-top: 2px;
+  color: $tinta-redam;
+  font-family: $font-angka;
+  font-size: $fs-label;
+  font-weight: $fw-semibold;
+  line-height: 1.4;
+}
+
+.rankTop {
+  color: $hijau-buku;
+}
+
 .cSaran {
   text-align: right;
 }
@@ -184,7 +217,7 @@
   color: $naik;
 
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 8px;
     height: 8px;
@@ -294,7 +327,7 @@
     font-size: $fs-tabel;
 
     &::after {
-      content: ' \2192';
+      content: " \2192";
       color: $tinta-redam;
       font-family: $font-teks;
     }
@@ -302,9 +335,9 @@
 
   .row {
     // Selisih hanya berarti untuk keputusan naik.
-    &[data-keputusan='promo'] .cSelisih,
-    &[data-keputusan='tahan'] .cSelisih,
-    &[data-keputusan='data'] .cSelisih {
+    &[data-keputusan="promo"] .cSelisih,
+    &[data-keputusan="tahan"] .cSelisih,
+    &[data-keputusan="data"] .cSelisih {
       display: none;
     }
   }

@@ -1,0 +1,201 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+.root {
+  display: grid;
+  gap: $sp-4;
+}
+
+.intro {
+  max-width: 66ch;
+  font-size: $fs-tabel;
+  line-height: 1.55;
+}
+
+.small {
+  @include label-kapital;
+  margin-bottom: $sp-3;
+  color: $tinta-redam;
+}
+
+// Keterangan kode kriteria, gaya titik-titik buku kas seperti rincian di dialog produk.
+.legend {
+  margin: 0;
+
+  > div {
+    display: flex;
+    gap: $sp-3;
+    padding: 4px 0;
+    font-size: $fs-tabel;
+  }
+
+  dt {
+    flex: none;
+    min-width: 2.2em;
+    font-family: $font-angka;
+    font-weight: $fw-bold;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+// ---------- Matriks ----------
+.matrix {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: $fs-tabel;
+
+  th,
+  td {
+    padding: 8px 10px;
+    border: 1px solid $garis-buku;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  thead th,
+  tbody th {
+    background: $baris-judul;
+    font-family: $font-angka;
+    font-weight: $fw-bold;
+  }
+
+  thead th {
+    border-top: 2px solid $hijau-buku;
+    border-bottom: 3px double $hijau-buku;
+  }
+}
+
+.select {
+  inline-size: 100%;
+  min-block-size: $touch-min;
+  padding: 4px 6px;
+  border: 1px solid $garis-buku;
+  border-radius: $radius;
+  background: $kertas;
+  color: $tinta;
+  font: inherit;
+  font-size: 13px;
+}
+
+.diag,
+.recip {
+  display: block;
+  font-family: $font-angka;
+  font-weight: $fw-semibold;
+}
+
+// Sel kebalikan dibuat redup karena tidak bisa diisi.
+.recip {
+  color: $tinta-redam;
+}
+
+// ---------- Bobot ----------
+.weights {
+  display: grid;
+  gap: $sp-2;
+  margin: 0 0 $sp-3;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(60px, 140px) 52px;
+    align-items: center;
+    gap: $sp-3;
+    font-size: $fs-tabel;
+
+    @include down($bp-md) {
+      grid-template-columns: minmax(0, 1fr) 52px;
+    }
+  }
+}
+
+.wName b {
+  font-family: $font-angka;
+}
+
+.wBar {
+  display: block;
+  block-size: 8px;
+  background: $baris-judul;
+
+  > span {
+    display: block;
+    block-size: 100%;
+    background: $hijau-buku;
+  }
+
+  @include down($bp-md) {
+    display: none;
+  }
+}
+
+.wValue {
+  font-family: $font-angka;
+  font-weight: $fw-semibold;
+  text-align: right;
+}
+
+.cr {
+  font-weight: $fw-bold;
+  font-size: $fs-tabel;
+}
+
+.ok { color: $promo; }
+.warn { color: $naik; }
+
+.detail {
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+}
+
+.hint {
+  max-width: 66ch;
+  margin-top: $sp-2;
+  font-size: $fs-tabel;
+  line-height: 1.5;
+}
+
+// ---------- Aksi ----------
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-3;
+}
+
+.save {
+  min-block-size: $touch-min;
+  padding: 0 $sp-4;
+  border: 2px solid $hijau-buku;
+  border-radius: $radius;
+  background: $hijau-buku;
+  color: $kertas;
+  font: inherit;
+  font-weight: $fw-semibold;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+.state {
+  color: $tinta-redam;
+  font-size: $fs-kecil;
+}
+
+.error {
+  color: $naik;
+  font-size: $fs-tabel;
+  font-weight: $fw-semibold;
+}
